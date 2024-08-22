@@ -1,0 +1,148 @@
+/* dark radial background */
+body{
+      padding: 0;
+      margin: 0;
+      background: radial-gradient(circle at center, #1a1a1a, #000000 100%);
+}
+
+
+
+.timeline-container{
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px;
+   
+
+}
+
+
+/* wrap for timeline */
+
+.timeline-wrap{
+      position: relative;
+      overflow: hidden;
+      margin: auto;
+}
+
+
+/* vertical line in the center */
+
+
+.timeline-line{
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      width: 2px;
+      background-color: rgba(104, 114, 128, 0.2);
+      transform: translateX(-50%);
+}
+
+
+/* Each timeline item */
+
+.timeline-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+}
+
+/* Empty space on either side of the icon */
+
+.timeline-empty{
+      width: 40%;
+}
+
+
+/* Circle with number inside */
+
+.timeline-icon{
+      position: absolute;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow:0 0 15px rgba(255, 105, 180, 0.7), 0 0 30px rgba(70, 130, 180, 0.5);
+      transition: box-shadow 0.3 ease;
+}
+
+/* Active state for the timeline content */
+.timeline-icon.active{
+      background: #FF44EC;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 40px #44BCFF;
+
+}
+
+
+.timeline-icon:hover{
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px #FF44EC, 0 0 40px #44BCFF;
+}
+
+
+.timeline-icon,
+.timeline-content{
+      transition: .3s ease;
+}
+
+
+
+
+/* timeline content */
+
+.timeline-content{
+      width: 40%;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7), 0 0 30px rgba(70, 130, 180, 0.5);
+      transition: box-shadow 0.3s ease;
+      margin: 40px;
+
+}
+
+/* Active state for the timeline content */
+.timeline-content.active{
+      background: #FF44EC;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 40px #44BCFF;
+
+}
+
+
+.timeline-content:hover{
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px #FF44EC, 0 0 40px #44BCFF;
+}
+
+
+/* Title styling */
+.timeline-content h3{
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 700;
+}
+
+/* Paragraph styling */
+
+.timeline-content p {
+      color: white;
+      line-height: 1.5rem;
+      font-size: 1rem;
+}
+
+/* Flexbox adjustments for left and right timelines */
+
+
+.left-timeline{
+      flex-direction: row-reverse;
+}
+
+
+
+
+
